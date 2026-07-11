@@ -15,7 +15,7 @@ export default {
         {
             name: "Amount",
             id: "amount",
-            required: true,
+            required: false,
             type: "number",
             min: 1,
             max: 50
@@ -64,5 +64,5 @@ async function purge(...args) {
     if (response === "BotPerm") return `!{i} I don't have \`Read Message History\` & \`Manage Messages\` to delete messages`;
     else if (response === "MemberPerm") return `!{i} Your don't have \`Read Message History\` & \`Manage Messages\` to delete messages`;
     else if (response === "NoMessages") return `!{i} No messages found that can be cleaned`;
-    else return `!{i} Failed to Delete Messages`;
+    // else return `!{i} Failed to Delete Messages`;
 }

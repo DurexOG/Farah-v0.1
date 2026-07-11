@@ -18,6 +18,7 @@ import {
   GiveawaysManager,
   VoiceMaster,
 } from "./utils/index.mjs";
+import LavalinkPlayer from "./utils/classes/LavalinkPlayer.mjs";
 import globalConfig from "../Assets/Global/config.mjs";
 import "./utils/extenders/index.mjs";
 import "./utils/extenders/replaceEmoji.mjs";
@@ -78,6 +79,7 @@ class Bot extends Client {
       this.voiceMaster = new VoiceMaster(this);
       this.lvl = new Level(this);
       this.eco = new Economy(this);
+      this.lavalink = new LavalinkPlayer(this);
 
       await this.loadCommands();
 
