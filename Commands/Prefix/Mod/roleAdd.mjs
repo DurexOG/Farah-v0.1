@@ -9,7 +9,7 @@ export default {
     category: "Moderation",
     permissions: {
         user: ["ManageRoles"],
-        bot: ["Adminstration"]
+        bot: ["ManageRoles"]
     },
     options: [
         {
@@ -64,8 +64,10 @@ async function addRole(issuer, user, role) {
     const response = await ModUtils.addRole(issuer, user, role);
     if (typeof response === "boolean") return `^{command.roleAdd.success}\n> Role: ${role}\n> Member: ${user}`;
     else if(response === "MemberPerm") return "^{command.roleAdd.userPerm}"
-    else if (response === "BotPerm" || response === "BotPositon") return `^{command.roleAdd.botPerm}`;
-    else if (response === "BotRole") return `^{command.mod.inValidRole}`;
+    else if (response === "BotPerm" || response === "BotPositon") return `^{command.roleAdd.botPerm}`; 
+
+    else if(response === "BotRole") return `^{command.roleAdd.invalidRole}`;
+
     else if (response === "Already") return `^{command.roleAdd.already}`;
     else return `^{command.roleAdd.error}`;
 }

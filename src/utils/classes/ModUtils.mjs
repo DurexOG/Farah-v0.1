@@ -535,7 +535,8 @@ export default class ModUtils {
         if (!memberInteract(issuer.guild.members.me, target)) return "BotPerm";
         if (role?.position >= myPositon) return "BotPositon";
         if (role.tags && role.tags.botId) return "BotRole";
-        if (!target.roles.cache.get(role)) return "Already";
+        // If member already has the role, do not add it again
+        if (target.roles.cache.get(role)) return "Already";
         try {
             await target.roles.add(role)
             await logModeration(issuer, target, null, "RoleAdd", { role });

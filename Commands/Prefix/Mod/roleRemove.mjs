@@ -63,10 +63,11 @@ export default {
 
 async function removeRole(issuer, user, role) {
     const response = await ModUtils.removeRole(issuer, user, role);
-    if (typeof response === "boolean") return `^{command.roleRemove.success}\n- Target: ${user}\n- Role: ${role}`;
+    if (typeof response === "boolean") return `^{command.roleRemove.success}\n> Target: ${user}\n> Role: ${role}`;
     else if(response === "MemberPerm") return "^{command.roleRemove.userPerm}"
     else if (response === "BotPerm" || response === "BotPositon") return `^{command.roleRemove.botPerm}`;
-    else if (response === "BotRole") return `^{command.mod.inValidRole}`;
+    else if (response === "BotRole") return `^{command.roleRemove.invalidRole}`;
     else if (response === "Already") return `^{command.roleRemove.already}`;
     else return `^{command.roleRemove.error}`;
 }
+

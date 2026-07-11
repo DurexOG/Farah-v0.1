@@ -1,4 +1,5 @@
-import { Events } from "discord.js";
+import { ActivityType, Events } from "discord.js";
+
 import logger, { webhookLog } from "../utils/logger.mjs";
 import {
   EmbedBuilder,
@@ -28,10 +29,42 @@ export default {
   run: async (client) => {
     logger(`Logged in as ${client.user.tag}!`.cyan.bold);
 
-    client.user.setPresence({
-      activities: [client.config.Activity],
-      status: client.config.Status,
-    });
+    const setFuturisticPresence = () => {
+      const guildCount = client.guilds.cache.size;
+      client.user.setPresence({
+        status: client.config.Status,
+        activities: [
+          {
+            type: ActivityType.Listening,
+            name: `.help | farah-v0.2`,
+          },
+          {
+            type: ActivityType.Watching,
+            name: `watching ${guildCount} servers exactly`,
+          },
+        ],
+      });
+    };
+
+    // Initial presence + autoswitch every 10s
+    setFuturisticPresence();
+
+    let switchIdx = 0;
+    const tick = () => {
+      const guildCount = client.guilds.cache.size;
+      const activity = switchIdx % 2 === 0
+        ? { type: ActivityType.Listening, name: `.help | farah-v0.2` }
+        : { type: ActivityType.Watching, name: `watching ${guildCount} servers exactly` };
+
+      client.user.setPresence({
+        status: client.config.Status,
+        activities: [activity],
+      });
+      switchIdx++;
+    };
+
+    setInterval(tick, 10 * 1000);
+
 
     const process2 = async () => {
       const data = await client.db.Find("GuildConfig");

@@ -1,7 +1,7 @@
 import DefaultEmbed from "../Default/embed.mjs";
 export default {
     ...DefaultEmbed,
-    color: "#40E0D0",
+    color: "#00E5FF",
     successcolor: "#00FF00",
     stanbycolor: "#FFFFFF",
     wrongcolor: "#FF0000",
