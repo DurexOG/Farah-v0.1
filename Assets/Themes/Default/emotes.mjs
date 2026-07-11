@@ -1,10 +1,10 @@
 export default {
-    y: "<:YellowTick:1163809787746713620>", // yes 
-    x: "<:err:1190278628370554991>", // no
-    i: "<:err:1190278628370554991>", // info
+    y: "<a:452028tick:1525483103466819615>", // yes 
+    x: "<a:880726error:1525483128058286100>", // no
+    i: "<a:880726error:1525483128058286100>", // info
     l: " ", // loading
   
-    coin: "<a:coins:1162760743943417936>",
+    coin: "<a:933416goldenspincoin:1525480690999627857>",
     "12mboost": "<:yellow12monthboosting:1169246582135337000>",
     "15mboost": "<:yellow15monthboosting:1169246587332071574>",
     "18mboost": "<:yellow18monthboosting:1169246590507163760>",
@@ -13,29 +13,29 @@ export default {
     "2mboost": "<:yellow2monthboosting:1169246558764683355>",
     "3mboost": "<:yellow3monthboosting:1169246571326615562>",
     "6mboost": "<:yellow6monthboosting:1169246576418508840>",
-    "announcement": "<:yellowannouncement:1169246603681468567>",
-    "bughunter": "<:yellowbughunter:1169246608785940480>",
-    "diamond": "<:yellowdiamond:1169246613445804073>",
-    "dollar": "<:yellowdollar:1169246617765937152>",
-    "dot": "<:yellowdot:1169246621582753872>",
-    "earth": "<:yellowearth:1169246626389438559>",
-    "flag": "<:yellowflag:1169246630814429206>",
-    "gear": "<:yellowgear:1169246638699716699>",
-    "home": "<:yellowhome:1169246647918809179>",
-    "leaf": "<:yellowleaf:1169246651576221727>",
-    "moderator": "<:yellowmoderator:1169246657683128420>",
-    "newDiscordUser": "<:yellownewDiscordUser:1169246665362903040>",
-    "oldPartner": "<:yellowoldPartner:1169246669641097306>",
-    "saturn": "<:yellowsaturn:1169246676888854638>",
-    "skull": "<:yellowskull:1169246682731528202>",
-    "star": "<:yellowstar:1169246687450120192>",
-    "thunder": "<:yellowthunder:1169246692286140466>",
+    "announcement": "<a:84931announcement:1525474928634236999>",
+    "bughunter": "<:14879greenbughunter:1525475216292188211>",
+    "diamond": "<:738422minecraftdiamond:1525475502167556256>",
+    "dollar": "<:172130rgd:1525475755369168917>",
+    "dot": "<a:2363dotrgb:1525475956222066829>",
+    "earth": "<:42690wplace:1525476492413374597>",
+    "flag": "🎌",
+    "gear": "<a:481506gear5luffyrun:1525476643269771334>",
+    "home": "<:50738home:1525476868734718052>",
+    "leaf": "<:40575wcleaf:1525477055238766673>",
+    "moderator": "<:231556mods:1525477392305487932>",
+    "newDiscordUser": "<a:192988babybottle:1525477558412644423>",
+    "oldPartner": "<a:494821tv:1525477859739570306>",
+    "saturn": "<:919770pixelsaturn:1525478112782057482>",
+    "skull": "<:14718skullthink:1525478457427890266>",
+    "star": "<a:259419darkbluearrow:1525479198234513631>",
+    "thunder": "<:437050lightning:1525479809709375488>",
   
   
     Arrows: {
-      right: "<:yellowRight:1180899802280628337>",
-      left: "<:yellowLeft:1180899740708261899>",
-      forward: "<:yellowForward:1180899834790678558>",
-      back: "<:yellowBack:1180899820878176276>"
+      right: "<a:9691hellokittyarrowr:1525483071787503808>",
+      left: "<a:7367hellokittyarrowl:1525483047091310633>",
+      forward: "⏩",
+      back: "🔙"
     }
 }
