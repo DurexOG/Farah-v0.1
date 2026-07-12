@@ -20,11 +20,31 @@ export default {
       const guildData = await message.guild.fetchData();
       const prefix = guildData?.Prefix || client.config.Prefix;
       const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(prefix)})`);
-      if (!prefixRegex.test(message.content)) return;
 
-      const [mPrefix] = message.content.match(prefixRegex);
-      const args = message.content.slice(mPrefix.length).trim().split(/ +/g);
-      const cmd = args.shift().toLowerCase();
+      const isNoprefixUser =
+        !!guildData?.Noprefix?.Enable &&
+        Array.isArray(guildData?.Noprefix?.Users) &&
+        guildData.Noprefix.Users.includes(message.author.id);
+
+      // If user is NOT whitelisted, keep the old behavior (require prefix).
+      if (!isNoprefixUser && !prefixRegex.test(message.content)) return;
+
+      // If user IS whitelisted, parse first word as command name.
+      let cmd;
+      let args;
+      let mPrefix;
+
+      if (prefixRegex.test(message.content)) {
+        ;[mPrefix] = message.content.match(prefixRegex);
+        args = message.content.slice(mPrefix.length).trim().split(/ +/g);
+        cmd = args.shift().toLowerCase();
+      } else {
+        const parts = message.content.trim().split(/ +/g);
+        cmd = (parts.shift() || "").toLowerCase();
+        args = parts;
+        mPrefix = "";
+      }
+
 
       let command =
         client.commands.get(cmd) ||

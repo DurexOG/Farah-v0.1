@@ -5,7 +5,7 @@ export default {
     name: "setnick",
     description: "set nickname for a Specified Member",
     cooldown: 5,
-    aliases: ["nickset", "set-nick", "set-nickname"],
+    aliases: ["nickset", "naam", "set-nickname"],
     category: "Moderation",
     permissions: {
         user: ["ManageNicknames"],

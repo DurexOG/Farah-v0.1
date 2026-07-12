@@ -6,7 +6,7 @@ export default {
   name: 'vcunmuteall',
   description: "unmute all non-bot members from your voice channel",
   cooldown: 5,
-  aliases: ['vc-unmute-all', 'unmuteall', 'vunmuteall'],
+  aliases: ['vc-unmute-all', 'unmuteall', 'sabbolo'],
   category: 'Moderation',
   permissions: {
     user: ['ModerateMembers'],

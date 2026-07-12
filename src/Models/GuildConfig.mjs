@@ -302,6 +302,17 @@ export default {
     default: { Type: "" },
   },
 
+  Noprefix: {
+    Enable: {
+      type: Boolean,
+      default: false,
+    },
+    Users: {
+      type: Array,
+      default: [],
+    },
+  },
+
   Levels: { type: Boolean, default: true },
   LevelupChannel: { type: String, default: "" },
   VoiceLevelupChannel: { type: String, default: "" },

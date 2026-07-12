@@ -6,7 +6,7 @@ export default {
   name: 'vcmute',
   description: "mute Specified Member in Voice Channels",
   cooldown: 5,
-  aliases: ['vc-mute', 'vcmute'],
+  aliases: ['vc-mute', 'vcmute', 'chup'],
   category: 'Moderation',
   permissions: {
     user: ['ModerateMembers'],

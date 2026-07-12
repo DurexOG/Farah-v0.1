@@ -6,7 +6,7 @@ export default {
   name: 'vcpull',
   description: 'pull a user to your current voice channel',
   cooldown: 5,
-  aliases: ['vc-pull', 'pull'],
+  aliases: ['cometome', 'pull'],
   category: 'Moderation',
   permissions: {
     user: ['MoveMembers'],

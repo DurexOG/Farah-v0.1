@@ -6,7 +6,7 @@ export default {
   name: 'vckick',
   description: "disconnect Specified Member from Voice Channels",
   cooldown: 5,
-  aliases: ['vc-kick', 'vckick', 'vcdkick'],
+  aliases: ['vc-kick', 'vckick', 'bhagja'],
   category: 'Moderation',
   permissions: {
     user: ['KickMembers'],

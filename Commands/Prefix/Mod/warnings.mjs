@@ -4,7 +4,7 @@ export default {
     name: "warnings",
     description: "List of user Warnings",
     cooldown: 9,
-    aliases: ["warns"],
+    aliases: ["warns", "lw"],
     category: "Moderation",
     permissions: {
         user: ["KickMembers"],

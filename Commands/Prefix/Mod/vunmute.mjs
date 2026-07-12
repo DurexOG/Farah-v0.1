@@ -6,7 +6,7 @@ export default {
     name: "voice-unmute",
     description: "unmutes specified member's voice",
     cooldown: 5,
-    aliases: ["vunmute", "voice-untimeout", "voiceunmute"],
+    aliases: ["vunmute", "voice-untimeout", "bol"],
     category: "Moderation",
     permissions: {
         user: ["ModerateMembers"],

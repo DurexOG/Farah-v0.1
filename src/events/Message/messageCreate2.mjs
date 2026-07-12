@@ -12,6 +12,7 @@ import {
     prefixHandler,
 } from "../../utils/handlers/index.mjs";
 
+
 import { logger, escapeRegex, automod } from "../../utils/index.mjs";
 
 export default {
@@ -32,6 +33,9 @@ export default {
             //* Custom Commands
             if (guildData?.CustomCommands?.Enable) await CustomCommandHandler(message, guildData);
             if (guildData?.RolesCommands?.List.length) await RoleCommandHandler(message, guildData);
+
+
+
 
             if (guildData.Levels == true) await LevelHandler(message, guildData)
             if(guildData.StickyMessages?.Enable) await StickyMessagesHandler(message, guildData)

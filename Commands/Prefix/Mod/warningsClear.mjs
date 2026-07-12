@@ -4,7 +4,7 @@ export default {
     name: "warnings-clear",
     description: "clear of user Warnings",
     cooldown: 9,
-    aliases: ["warns-clear", "clear-warn", "clear-warnings"],
+    aliases: ["warns-clear", "cw", "clear-warnings"],
     category: "Moderation",
     permissions: {
         user: ["KickMembers"],

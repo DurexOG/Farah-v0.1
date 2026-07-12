@@ -35,12 +35,12 @@ export default {
         status: client.config.Status,
         activities: [
           {
-            type: ActivityType.Listening,
-            name: `.help | farah-v0.2`,
+            type: ActivityType.Playing,
+            name: `.help | Farah-v0.2`,
           },
           {
-            type: ActivityType.Watching,
-            name: `watching ${guildCount} servers exactly`,
+            type: ActivityType.Streaming,
+            name: `${guildCount} servers Watching`,
           },
         ],
       });
@@ -53,8 +53,8 @@ export default {
     const tick = () => {
       const guildCount = client.guilds.cache.size;
       const activity = switchIdx % 2 === 0
-        ? { type: ActivityType.Listening, name: `.help | farah-v0.2` }
-        : { type: ActivityType.Watching, name: `watching ${guildCount} servers exactly` };
+        ? { type: ActivityType.Playing, name: `.help | Farah-v0.2` }
+        : { type: ActivityType.Streaming, name: `${guildCount} servers watching` };
 
       client.user.setPresence({
         status: client.config.Status,
@@ -63,7 +63,7 @@ export default {
       switchIdx++;
     };
 
-    setInterval(tick, 10 * 1000);
+    setInterval(tick, 5 * 1000);
 
 
     const process2 = async () => {

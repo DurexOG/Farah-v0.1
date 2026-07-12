@@ -5,7 +5,7 @@ export default {
     name: "purge-bots",
     description: "Deletes the specified amount of message from bots in channel",
     cooldown: 5,
-    aliases: ["purgebot", "purgebots", "bot-purge", "purge-bot"],
+    aliases: ["purgebot", "purgebots", "pb", "purge-bot"],
     category: "Moderation",
     permissions: {
         user: ["ManageMessages", "ReadMessageHistory"],

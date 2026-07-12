@@ -4,7 +4,7 @@ export default {
     name: "warn",
     description: "Warn Specified Member",
     cooldown: 20,
-    aliases: [],
+    aliases: ["bhak"],
     category: "Moderation",
     permissions: {
         user: ["KickMembers"],

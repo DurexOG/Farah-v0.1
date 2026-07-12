@@ -1,13 +1,6 @@
-- [x] Fix roleAdd/roleRemove command output alignment with ModUtils return codes
-
-- [x] Update futuristic embed theme colors (sharp look)
-
-- [x] Add ready presence autoswitch every 10s between:
-
-  - [x] `.help | farah-v0.2`
-
-  - [x] watching <exact guild count> servers
-
-- [ ] Quick sanity pass for other role/mod commands for obvious typos/mismatched return codes
-- [ ] Run a quick node syntax check / start if possible
+- [x] Locate message command handling for prefix commands.
+- [x] Add `GuildConfig.Noprefix` schema fields.
+- [x] Add owner-only command file `Commands/Prefix/OwnerOnly/noprefix.mjs` supporting `.noprefix add <user>` and `.noprefix remove <user>`.
+- [x] Update `src/events/Message/messageCreate2.mjs` to execute prefix commands when a whitelisted user sends the command WITHOUT the configured prefix.
+- [ ] (Optional) Add tests / run bot and validate runtime behavior.
 

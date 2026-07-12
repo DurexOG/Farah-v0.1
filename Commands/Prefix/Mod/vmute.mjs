@@ -6,7 +6,7 @@ export default {
     name: "voice-mute",
     description: "Timeoit Specified Member",
     cooldown: 5,
-    aliases: ["vmute", "voice-timeout", "voicemute"],
+    aliases: ["vmute", "voice-timeout", "chup"],
     category: "Moderation",
     permissions: {
         user: ["ModerateMembers"],
